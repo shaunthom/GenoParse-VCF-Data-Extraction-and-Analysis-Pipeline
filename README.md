@@ -22,21 +22,45 @@ Columns: The standard columns in a VCF file include:
 8. INFO: Additional information on the variant, in a key=value format
 FORMAT and sample columns: These provide genotyping information for each sample if the VCF file includes multiple samples.
 
+### Project Overview:
+
+The VCF file will be parsed line-by-line, post the header lines. Each variant line is converted into a dictionary format. An example dictionary entry is truncated below for illustration:
+
+{
+    "ALT": "G",
+    "CHROM": "4",
+    "FILTER": "PASS",
+    "ID": ".",
+    "INFO": {
+        "Gene.ensGene": "ENSG00000109471,ENSG00000138684",
+        "Gene.refGene": "IL2,IL21",
+        ...
+    },
+    "POS": 123416186,
+    "QUAL" :23.25,
+    "REF": "A",
+    "SAMPLE": {
+        "XG102": {
+            "AD": "51,8",
+            "DP": "59",
+            ...
+        }
+    }
+}
+
 ### Key Features:
 
 Parsing VCF Files: Read and transform VCF file lines into dictionary entries.
 
 Header Management: Identification and skipping of header lines beginning with double hashes (##).
 
-Predictor Field Extraction: Implementation of pull_basic_and_predictor_fields function, which reads mini_project_data.json and selects variants based on specific predictor fields (like FATHMM_pred, LRT_pred, MetaLR_pred, etc.).
+Predictor Field Extraction: Implementation of pull_basic_and_predictor_fields function, which reads project_data.json and selects variants based on specific predictor fields (like FATHMM_pred, LRT_pred, MetaLR_pred, etc.).
 
 Integer Mapping of Predictors: Convert predictor text descriptions to integer values and sum these into sum_predictor_values.
 
 Processing Gzip Files: A function pull_basic_and_predictor_fields_gzip to handle gzipped VCF files, with output in mini_project1_gzip.json.
 
 Filtering Non-Zero Predictors: return_all_non_zero_sum_predictor_values function selects variants with non-zero sum_predictor_values, outputting sum_predictor_values_gt_zero.json
-
-
 
 
 ### Contributing
