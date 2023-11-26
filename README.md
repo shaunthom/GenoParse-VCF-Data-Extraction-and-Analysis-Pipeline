@@ -62,6 +62,43 @@ Processing Gzip Files: A function pull_basic_and_predictor_fields_gzip to handle
 
 Filtering Non-Zero Predictors: return_all_non_zero_sum_predictor_values function selects variants with non-zero sum_predictor_values, outputting sum_predictor_values_gt_zero.json
 
+### Step-by-Step Overview:
+
+##### Step 1: Determining Data Type
+
+Purpose: Analyze and identify the data types present in the VCF file.
+
+##### Step 2: Formatting Sample Fields
+
+Purpose: Format and standardize the sample-specific fields in the VCF file.
+
+##### Step 3: Creating Dictionary from Line
+
+Purpose: Transform each line of the VCF file into a dictionary format for easier data manipulation.
+
+##### Step 4: Reading VCF Files
+
+Purpose: Read and process VCF files, preparing the data for further analysis.
+
+##### Step 5: Extracting Info Field
+
+Purpose: Extract and process the 'INFO' field from each line in the VCF file.
+
+##### Step 6: Creating Dictionary with Info Field
+
+Purpose: Generate dictionaries keyed by 'INFO' field values from the VCF file data.
+
+##### Step 7: Saving Data as JSON
+
+Purpose: Save the processed VCF data in a JSON format for ease of use in downstream applications.
+
+##### Step 8: Load Data from JSON File
+
+Purpose: Load and possibly further process data from a previously saved JSON file.
+
+##### Step 9: Finding Variant
+
+Purpose: Identify and extract specific genetic variants from the processed data.
 
 ### Contributing
 
