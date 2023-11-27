@@ -1,8 +1,18 @@
 # Bio-Gene_Format_Extracter
 
-It is a genetic related project.
-We will be manipulating a file. This file has one thousand variants in it. Each line after the header lines is a variant. We shall open the variant file and inspect its contents. We will parse each line and transform it into a dictionary. The final output will be a list of dictionaries.
+This project involves genetic data analysis. We'll be working with a file containing a thousand genetic variants. Each variant is listed on a separate line following the introductory header lines. Our task involves opening this variant file to examine its details. We will process each line, converting it into a dictionary format. The end result will be a compilation of these dictionaries.
 
+### Why do we need such a file parser?
+
+The purpose of this project is to effectively analyze and manage genetic data, particularly the genetic variants contained in a Variant Call Format (VCF) file. Here are some key reasons for undertaking this task:
+
+1. Facilitating Data Analysis: Genetic data, especially in VCF format, contains complex and detailed information about genetic variations. Converting each line of data into a dictionary format simplifies the data structure, making it easier to analyze and manipulate
+
+2. Standardizing Data Format: By transforming each variant into a dictionary, the data is standardized, allowing for consistent processing and analysis.
+
+3. Enhancing Accessibility and Usability: Dictionaries are a more accessible format for many computational processes.
+
+4. Preparing for Advanced Applications: The simplified, dictionary-based format of the data paves the way for more advanced computational techniques, such as machine learning models, which can be used for predictive analysis, identifying patterns, and making significant biological discoveries.
 
 ### Introduction:
 
